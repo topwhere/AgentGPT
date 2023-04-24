@@ -3,16 +3,20 @@ import { useTranslation } from "next-i18next";
 import {
   FaBars,
   FaCog,
-  FaDiscord,
   FaGithub,
   FaQuestionCircle,
   FaRobot,
   FaRocket,
   FaSignInAlt,
   FaSignOutAlt,
-  FaTwitter,
-  FaUser,
+  FaUser, FaWeight, FaWeightHanging,
 } from "react-icons/fa";
+import {
+  SiTelegram
+} from "react-icons/si";
+import {
+  AiFillWeiboCircle
+} from "react-icons/ai";
 import clsx from "clsx";
 import { useAuth } from "../hooks/useAuth";
 import type { Session } from "next-auth";
@@ -81,6 +85,10 @@ const Drawer = ({
 
   const userAgents = query.data ?? [];
 
+  // @ts-ignore
+  // @ts-ignore
+  // @ts-ignore
+  // @ts-ignore
   return (
     <>
       <div
@@ -152,13 +160,31 @@ const Drawer = ({
             text={t("Help")}
             onClick={showHelp}
           />
-          <DrawerItem icon={<FaCog />} text="Settings" onClick={showSettings} />
           <DrawerItem
-            icon={<FaGithub />}
-            text="GitHub"
-            href="https://github.com/reworkd/AgentGPT"
+            icon={<AiFillWeiboCircle />}
+            text={t("WeiBo")}
+            href="https://weibo.com/u/7834877671"
             target="_blank"
           />
+          <DrawerItem
+            icon={<SiTelegram />}
+            text={t("TuiTe")}
+            href="https://twitter.com/GPT100ai"
+            target="_blank"
+          />
+          <DrawerItem
+            icon={<FaWeightHanging />}
+            text={t("Want.Work")}
+            href="https://want.chat/chat"
+            target="_blank"
+          />
+          <DrawerItem
+            icon={<FaWeight />}
+            text={t("ChatGpt-V")}
+            href="https://t.me/chatgptv12345"
+            target="_blank"
+          />
+          <DrawerItem icon={<FaCog />} text="Settings" onClick={showSettings} />
         </div>
       </div>
     </>

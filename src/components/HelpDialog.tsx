@@ -15,7 +15,7 @@ export default function HelpDialog({
     <Dialog header={`${t('WELCOME_TO_CHATGPT')} 🤖`} isShown={show} close={close}>
       <div className="text-md relative flex-auto p-2 leading-relaxed">
         <p>
-          <strong>AgentGPT</strong> {t('allows you to configure and deploy Autonomous AI agents. Name your custom AI and have it embark on any goal imaginable. It will attempt to reach the goal by thinking of tasks to do, executing them, and learning from the results 🚀')}
+          <strong>AutoGPT</strong> {t('allows you to configure and deploy Autonomous AI agents. Name your custom AI and have it embark on any goal imaginable. It will attempt to reach the goal by thinking of tasks to do, executing them, and learning from the results 🚀')}
         </p>
         <div>
           <br />
